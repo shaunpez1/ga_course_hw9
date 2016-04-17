@@ -29,7 +29,6 @@ $(document).ready(function(){
     window.sessionStorage.removeItem("spotify_access_token");
   });
 
-
   // Search listing of songs
   $(".search").on("submit", function(e){
     e.preventDefault();
