@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Spotify API Player</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="style.css" />
+	<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<script src="app2.js" charset="utf-8"></script></body>
+</head>
+<body>
+
+<div class="container margin-top-20">
+	<div>
+		<a href="index.html" class="btn btn-info">
+			<span class="glyphicon glyphicon-menu-left"></span>
+			Back
+		</a>
+	</div>
+
+	<div id="song-container">
+		<script id="track-template" type="text/x-handlebars-template">
+			<!--One Song-->
+			<div class="row margin-top-20 one-song">
+				<div class="col-sm-3">
+					<img src="{{image}}" class="img-responsive" />
+				</div>
+				<div class="col-sm-9">
+					<h2>{{title}}</h2>
+					<p>
+						By {{artist}}
+					</p>
+					<p>
+						Album: {{album}}
+					</p>
+					<div class="margin-top-20">
+						<audio controls>
+							<source src="{{clip}}" type="audio/mpeg">
+						</audio>
+					</div>
+					<div class="margin-top-20">
+						<a class="btn btn-danger btn-sm delete" data-id="{{id}}">
+							<span class="glyphicon glyphicon-remove margin-right-5"></span>
+							Delete Track
+						</a>
+					</div>
+				</div>
+			</div>
+			<!--/One Song-->
+		</script>
+	</div>
+</div>
+
+</body>
+</html>
